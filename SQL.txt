@@ -1,0 +1,33 @@
+Main Table:
+
+CREATE TABLE `accountdetails` (
+  `fullname` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `mail-id` varchar(45) DEFAULT NULL,
+  `number` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `accno` int(10) DEFAULT NULL,
+  `inde` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`inde`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1
+
+
+Balance Table:
+
+CREATE TABLE `balance` (
+  `accno` int(10) DEFAULT '0',
+  `balance` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+Triggers:
+
+CREATE DEFINER=`root`@`localhost` TRIGGER test.triggeacc
+    AFTER INSERT ON test.accountdetails
+    FOR EACH ROW
+BEGIN
+    -- statements
+    insert into test.balance (accno)  (select  accno from test.accountdetails order by inde desc limit 1)  ;
+
+END
