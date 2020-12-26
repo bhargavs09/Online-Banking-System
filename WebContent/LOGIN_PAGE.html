@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   <!-- <meta charset="utf-8" /> -->
+    <title>LOGIN_PAGE</title>
+    
+
+    <style>
+        body {
+            background-image: url("CFgliv.jpg");
+        }
+        div.login {
+            margin-left: 400px;
+            margin-right: 450px;
+            width: 500px;
+            border: 3px ridge white;
+            border-radius: 8px;
+            padding:20px;
+            
+        }
+        form.fm{
+            padding-left: 100px;
+            font-size:larger;
+        }
+    </style>
+</head>
+<body>
+        <h1 style="text-align:center;">
+         BANK TRANSACTIONS
+        </h1>  
+        <marquee  behavior="slide" direction="right"> WELCOME TO MOST SECURE TRANSACTIONS BANK </marquee>
+        <div style="text-align:center;">
+            <button onclick="window.location.href='LOGIN_PAGE.html'">HOME</button>
+            <button onclick="window.location.href='signu.html'">SIGNUP</button>
+            <button onclick="window.location.href='balance.html'">BALANCE CHECK</button>
+            <button onclick="window.location.href='charge.html'">TRANSACTION CHARGE</button>
+            <button onclick="window.location.href='help.html'">ABOUT US</button>
+
+        </div><br /><br />
+
+        <div class="login">
+            <p style="text-align:center;font-size:x-large;">SIGN IN</p>
+            <form class="fm" method="post" action="login">
+                EMAIL<br />
+                <input type="text" name="username" style="font-size:large;width:300px;" /><br /><br />
+                PASSWORD<br />
+                <input type="password" name="password" style="font-size:large;width:300px;" /><br /><br />
+                <a href="">Forgot Password?</a><br /><br />
+                <input type="submit" value="LOGIN" style="font-size:initial;width:300px;"><br /><br />
+                
+
+            </form>
+        </div>
+</body>
+</html>

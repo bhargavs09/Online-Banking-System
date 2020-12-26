@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body {
+    	background-image:url("bp.jpg");
+    	background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	.form-c1{
+		text-align:center;
+		margin:50px;
+	}
+	.ba{
+            margin-left:100px;
+            font-size:20px;
+            margin-top:1px;
+        }
+    table, th, td {
+  		border: 1px solid black;
+  		border-collapse: collapse;
+  		width:500px;
+  		font-size:large;
+  		height:40px;
+  		margin:40px 0px 0px 350px;
+	}
+	th, td {
+  		padding: 5px;
+  		text-align: center;    
+	}
+</style>
+<head>
+<meta charset="ISO-8859-1">
+<title>Transaction Charge</title>
+</head>
+<body>
+	<h1 style="text-align:center;margin:50px 0px 10px 0px;">TRANSACTION CHARGE</h1>
+	<input type="button" value="BACK" class="ba" onclick="window.location.href='LOGIN_PAGE.html'" />
+	<form name="nam" class="form-c1"  method="POST" >
+			<input type="number" name="anum" id="demo" placeholder="Amount" style="font-size:large;text-align:center;"> 
+			<input type="button" onclick="charge()" style="font-size:large;margin-left:20px;" value="CHECK"><br><br>
+			<p style="font-size:x-large;text-align:left;margin-left:350px;margin-top:70px;"> Results: </p>
+			<table>
+			<tr>
+				<td> Amount :</td>
+				<td>  <p id="in"> </p> </td>
+			</tr>
+			<tr>
+				<td> Charges :</td>
+				<td> - 1 </td>
+			</tr>
+			<tr>
+				<td> Amount Sent :</td>
+				<td>  <p id="result"> </p> </td>
+			</tr>
+			
+			</table>
+			
+		</form>
+</body>
+
+<script>
+	function charge(){
+		var num=document.getElementById("demo").value;
+		var total = parseInt(num) - 1;
+		document.getElementById("result").innerHTML=total;
+		document.getElementById("in").innerHTML=num;
+		//document.getElementById("result").innerHTML=document.nam.anum.value;
+	}
+</script>
+</html>

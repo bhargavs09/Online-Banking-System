@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> USER ACCOUNT </title>
+
+<style>
+
+	body {
+            background-image: url("4685.jpg");
+            background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: cover;
+  			box-sizing: border-box
+        }
+     .ad{
+     		text-align:center;
+     		font-size:x-large;
+     		margin-top:200px;
+     	}
+     
+	.popup1 {
+  		display: none;
+  		position: fixed;
+  		left: 180px;
+  		top: 400px;
+ 		border: 3px solid #f1f1f1;
+  		z-index: 9;	
+	}
+	.popup2 {
+  		display: none;
+  		position: fixed;
+  		right: 480px;
+  		top:400px;
+ 		border: 3px solid #f1f1f1;
+  		z-index: 9;
+  		
+	}
+	.chat-popup {
+  		display: none;
+  		position: fixed;
+  		right: 150px;
+  		top: 400px;
+ 		border: 3px solid #f1f1f1;
+  		z-index: 9;
+  		
+	}
+	.form-c1{
+		width: 250px;
+  		padding: 30px 30px 40px 30px;
+  		background-color: white;
+  		text-align:center;
+  		font-size:x-large;
+  		height: 100px;
+	}
+	.form-c2 {
+  		width: 300px;
+  		padding: 30px 30px 40px 30px;
+  		background-color: white;
+  		text-align:center;
+  		font-size:large;
+  		height: 150px;
+	}
+	.form-c3 {
+  		max-width: 300px;
+  		padding: 40px 40px 50px 40px;
+  		background-color: white;
+  		text-align:center;
+  		font-size:large;
+  		height: 100px;
+	}
+	.ba{
+		margin:40px 0px 0px 1200px;
+		font-size: 15px;
+	}
+	
+</style>
+</head>
+
+<body>
+	<input type="button" value="Log Out" class="ba" onclick="window.location.href='LOGIN_PAGE.html'" />
+	<p class="ad"> WELCOME  CUSTOMER </p>
+	<button onclick="openForm1()" style="text-align:left;font-size:x-large;margin-left:250px;margin-top:30px;"> Account Balance </button>
+	
+	<div class="popup1" id="myForm1">
+		<form class="form-c1"  method="POST" action="adds">
+			<input type="number" name="anum" placeholder="Account Number" style="font-size:large;"> <br><br>
+			<button type="submit" style="font-size:large">SEND</button>
+			<button onclick="closeForm1()" style="font-size:large;margin-left:20px;">CLOSE</button><br>
+			<!-- Balance: $ <div id="nop"></div> <br>  -->
+		</form>
+	</div>
+	
+	<button onclick="openForm2()" style="text-align:left;font-size:x-large;margin-left:150px;margin-top:30px;"> Amount Transfer </button>
+	<div class="popup2" id="myForm2">
+		<form class="form-c2" method="POST" action="transfer">
+			 <input type="number" name="anumber1" placeholder="From Account Number" style="font-size:large;"> <br><br>
+			 <input type="number" name="anumber2" placeholder="To Account Number" style="font-size:large;"> <br><br>
+			 <input type="number" name="amount" placeholder="Amount" style="font-size:large;"> <br><br>
+  			<button type="submit" style="font-size:large">TRANSFER</button>
+  			<button onclick="closeForm()" style="font-size:large;margin-left:20px;">CLOSE</button>
+		</form>
+	</div>
+	
+	<button onclick="openForm()" style="text-align:left;font-size:x-large;margin-left:150px;margin-top:30px;"> Add Balance </button><br></br>
+	
+	<div class="chat-popup" id="myForm">
+		<form class="form-c3" method="POST" action="add">
+			 <input type="number" name="anumber" placeholder="Account Number" style="font-size:large;"> <br><br>
+			 <input type="number" name="amount" placeholder="Amount" style="font-size:large;"> <br><br>
+  			<button type="submit" style="font-size:large">ADD</button>
+  			<button onclick="closeForm()" style="font-size:large;margin-left:20px;">CLOSE</button>
+		</form>
+	</div>
+	
+	
+	<script>
+		function openForm() {
+  			document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+  			document.getElementById("myForm").style.display = "none";
+		}
+		function openForm1() {
+  			document.getElementById("myForm1").style.display = "block";
+  			//document.getElementById("nop").innerHTML =abc;
+		}
+
+		function closeForm1() {
+			//document.getElementById("myForm1").reset();
+  			document.getElementById("myForm1").style.display = "none";
+		}
+		function openForm2() {
+  			document.getElementById("myForm2").style.display = "block";
+		}
+
+		function closeForm2() {
+  			document.getElementById("myForm2").style.display = "none";
+		}
+		//var abc=a;
+		//document.getElementById("nop").innerHTML="Balance:";
+	</script>
+</body>
+</html>
+
+
+
+
+<!-- <iframe src="demo.htm" class="fram" title="BALANCE"></iframe>
+	<iframe src="demo_iframe.htm" class="fra" title="BALANCE"></iframe>    -->

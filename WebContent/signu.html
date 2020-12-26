@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SIGH UP</title>
+    <style>
+        body{
+            background-image:url(bp.jpg);
+            background-size:cover;
+        }
+        form.sign{
+            text-align:left;
+            margin:10px 400px 40px;
+            width: 400px;
+            border: 2px ridge black;
+            padding:30px 20px 20px 100px;
+            color:black;
+        }
+        input.ba{
+            margin-left:60px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;color:black;">CREATE AN ACCOUNT</h1>
+    <input type="button" value="BACK" class="ba" onclick="window.location.href='LOGIN_PAGE.html'" />
+    <div class="si">
+        <form class="sign" method="POST" action="sin">
+            FULL NAME<br />
+            <input type="text" name="fullname" style="font-size:large;width:300px;"><br /><br />
+            USERNAME<br />
+            <input type="text" name="username" style="font-size:large;width:300px;"><br /><br />
+            PASSWORD<br />
+            <input type="password" name="password" style="font-size:large;width:300px;"><br /><br />
+            MAIL-ID<br />
+            <input type="email" name="mail" style="font-size:large;width:300px;"><br /><br />
+            CONTACT NUMBER<br />
+            <input type="number" name="number" style="font-size:large;width:300px;"><br /><br />
+            ADDRESS<br />
+            <input type="text" name="address" style="font-size:large;width:300px;"><br /><br /><br />
+            <input type="submit" value="SUBMIT"style="font-size:large;width:150px;"/>
+            <input type="reset" value="CLEAR" style="font-size:large;width:150px;" /><br /><br />
+
+        </form>
+    </div>
+</body>
+</html>
